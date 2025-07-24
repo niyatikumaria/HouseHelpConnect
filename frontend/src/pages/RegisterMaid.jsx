@@ -4,29 +4,31 @@ import { Link } from "react-router-dom";
 import { ArrowLeftIcon } from "@heroicons/react/outline";
 
 const RegisterMaid = () => (
-  <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+  <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
     <div className="max-w-3xl mx-auto">
-      <div className="text-center mb-10">
+      <div className="mb-8">
         <Link 
           to="/" 
-          className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4 transition-colors duration-200"
+          className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"
         >
           <ArrowLeftIcon className="h-5 w-5 mr-2" />
-          Back to home
+          <span className="text-sm font-medium">Back to home</span>
         </Link>
-        
-        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+      </div>
+
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-bold text-blue-900 sm:text-4xl">
           Join Our Professional Network
         </h2>
-        <p className="mt-4 text-lg text-gray-600">
-          Register as a home service provider and start getting clients in your area
+        <p className="mt-3 text-lg text-gray-600">
+          Register as a home service provider and start getting clients in your area.
         </p>
       </div>
 
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-        <div className="p-6 sm:p-10">
-          <div className="border-b border-gray-200 pb-6 mb-6">
-            <h3 className="text-lg font-medium text-gray-900">
+      <div className="bg-white shadow-md rounded-lg overflow-hidden">
+        <div className="p-6 sm:p-8">
+          <div className="border-b border-gray-200 pb-4 mb-6">
+            <h3 className="text-xl font-semibold text-gray-800">
               Maid Registration Form
             </h3>
             <p className="mt-1 text-sm text-gray-500">
@@ -35,14 +37,14 @@ const RegisterMaid = () => (
           </div>
           <MaidRegistrationForm />
         </div>
-        
-        <div className="bg-gray-50 px-6 py-4 sm:px-10">
+
+        <div className="bg-gray-50 px-6 py-4 sm:px-8">
           <p className="text-xs text-gray-500">
-            By registering, you agree to our{' '}
+            By registering, you agree to our{" "}
             <a href="#" className="font-medium text-blue-600 hover:text-blue-500">
               Terms of Service
-            </a>{' '}
-            and{' '}
+            </a>{" "}
+            and{" "}
             <a href="#" className="font-medium text-blue-600 hover:text-blue-500">
               Privacy Policy
             </a>.
@@ -50,9 +52,9 @@ const RegisterMaid = () => (
         </div>
       </div>
 
-      <div className="mt-8 text-center">
+      <div className="mt-6 text-center">
         <p className="text-sm text-gray-600">
-          Already registered?{' '}
+          Already registered?{" "}
           <Link 
             to="/login" 
             className="font-medium text-blue-600 hover:text-blue-500"

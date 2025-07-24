@@ -12,35 +12,35 @@ const Maids = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white pt-28 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-blue-900">
             Find Professional Maids
           </h2>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-600 sm:mt-4">
-            Search by your locality to find available home service providers
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+            Enter your locality to discover available, trusted home service providers.
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
           <form onSubmit={handleSubmit} className="mb-10">
-            <div className="flex shadow-sm rounded-md">
-              <div className="relative flex-grow focus-within:z-10">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <SearchIcon className="h-5 w-5 text-gray-400" />
+            <div className="flex rounded-md shadow-lg overflow-hidden border border-gray-200 bg-white">
+              <div className="relative flex-grow">
+                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                  <SearchIcon className="h-6 w-6 text-gray-400" />
                 </div>
                 <input
                   value={locality}
                   onChange={e => setLocality(e.target.value)}
-                  className="block w-full rounded-l-md pl-10 py-4 border-gray-300 focus:ring-blue-500 focus:border-blue-500 text-lg"
+                  className="w-full pl-12 pr-4 py-4 text-lg border-none focus:ring-2 focus:ring-blue-500 rounded-none"
                   placeholder="Enter your locality (e.g. 'Mumbai Central')"
                   required
                 />
               </div>
               <button
                 type="submit"
-                className="-ml-px relative inline-flex items-center px-6 py-4 border border-gray-300 text-lg font-medium rounded-r-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+                className="bg-blue-600 text-white px-6 py-4 text-lg font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
               >
                 Search
               </button>
@@ -49,24 +49,24 @@ const Maids = () => {
 
           {search && (
             <div className="mb-6">
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold text-gray-800">
                 Results for <span className="text-blue-600">"{locality}"</span>
               </h3>
             </div>
           )}
 
-          {search && <MaidList locality={locality} />}
-
-          {!search && (
-            <div className="text-center py-12 bg-white rounded-lg shadow-sm border border-gray-200">
-              <div className="mx-auto w-24 h-24 text-gray-300 mb-4">
+          {search ? (
+            <MaidList locality={locality} />
+          ) : (
+            <div className="text-center py-14 px-6 bg-white rounded-lg shadow border border-gray-200">
+              <div className="mx-auto w-20 h-20 text-gray-300 mb-4">
                 <SearchIcon className="w-full h-full" />
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-1">
-                Search for maids
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                Start Your Search
               </h3>
               <p className="text-gray-500">
-                Enter a locality above to find available maids in your area
+                Enter your locality above to see trusted maids available in your area.
               </p>
             </div>
           )}

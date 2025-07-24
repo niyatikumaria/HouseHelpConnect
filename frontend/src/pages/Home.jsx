@@ -9,11 +9,11 @@ const Home = () => (
           <span className="block text-blue-600">HouseHelp</span>
           <span className="block">Connect</span>
         </h1>
-        
+
         <p className="max-w-xl mx-auto text-xl text-gray-600 mb-10">
           Your trusted platform to connect with professional home service providers in your locality.
         </p>
-        
+
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
           <Link
             to="/register"
@@ -33,7 +33,7 @@ const Home = () => (
       <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="text-blue-600 mb-4">
-            <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
             </svg>
           </div>
@@ -45,7 +45,7 @@ const Home = () => (
 
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="text-blue-600 mb-4">
-            <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
@@ -58,7 +58,7 @@ const Home = () => (
 
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="text-blue-600 mb-4">
-            <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
